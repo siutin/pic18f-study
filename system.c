@@ -29,8 +29,8 @@ void ConfigureOscillator(void)
     register, select new clock sources, and to wait until new clock sources
     are stable before resuming execution of the main project. */
     
-    OSCTUNE = 0;              //PLL DISABLED
-    OSCCON = 0x70;            //Primary OSC Selected (OSCCON ERRATA FIX INTOSC must be 4/8 MHZ)
-    while (!OSCCONbits.OSTS); //Wait until Primary OSC is ready and running
-    OSCTUNE = 0x40;           //PLL ENABLED
+//    OSCTUNE = 0;              //PLL DISABLED
+//    OSCCON = 0x70;            //Primary OSC Selected (OSCCON ERRATA FIX INTOSC must be 4/8 MHZ)
+//    while (!OSCCONbits.OSTS); //Wait until Primary OSC is ready and running
+//    OSCTUNE = 0x40;           //PLL ENABLED
 }
