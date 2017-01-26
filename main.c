@@ -19,6 +19,7 @@
 
 #include "system.h"        /* System funct/params, like osc/peripheral config */
 #include "user.h"          /* User funct/params, such as InitApp */
+#include "delay.h"
 
 /******************************************************************************/
 /* User Global Variable Declaration                                           */
@@ -29,14 +30,6 @@
 /******************************************************************************/
 /* Main Program                                                               */
 /******************************************************************************/
-void delayzz(int count)
-{
-    int i,j;
-    for (i=0; i< 20000; i++) {
-        for(j=0; j< count; j++) {}
-    }    
-}
-
 void main(void)
 {
     /* Configure the oscillator for the device */
@@ -56,12 +49,12 @@ void main(void)
         LATAbits.LATA0 = 1;
         LATAbits.LATA1 = 0;
 
-        delayzz(1);
+        delay100ms(5);
         
         LATAbits.LATA0 = 0;
         LATAbits.LATA1 = 1;
 
-        delayzz(4);
+        delay100ms(5);
     }
 
 }
