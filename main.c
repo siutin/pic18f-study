@@ -20,6 +20,7 @@
 #include "system.h"        /* System funct/params, like osc/peripheral config */
 #include "user.h"          /* User funct/params, such as InitApp */
 #include "delay.h"
+#include "share.h"
 
 /******************************************************************************/
 /* User Global Variable Declaration                                           */
@@ -30,6 +31,7 @@
 /******************************************************************************/
 /* Main Program                                                               */
 /******************************************************************************/
+
 void main(void)
 {
     /* Configure the oscillator for the device */
@@ -44,18 +46,16 @@ void main(void)
 //    TRISB = 0;
 //    TRISC = 0;
     
-    while(1)
-    {
-        LATAbits.LATA0 = 1;
-        LATAbits.LATA1 = 0;
-
-        delay100ms(5);
+    while(1) {
         
-        LATAbits.LATA0 = 0;
-        LATAbits.LATA1 = 1;
+      if (tr1SecSignal) {
+        LATAbits.LATA0=1;
+        LATAbits.LATA1=0;
+      } else {
+        LATAbits.LATA0=0;
+        LATAbits.LATA1=1;
+       }
 
-        delay100ms(5);
-    }
-
+    }  
 }
 
