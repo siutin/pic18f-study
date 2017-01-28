@@ -46,8 +46,8 @@ void setupTimer0(void)
     
     // FOSC = 20MHz
     // FCPU = FOSC/4 = 20MHz/4 = 5MHz
-    // Overflow period = Time Period * Prescaler * Prescaler 
-    //                 = 1/FCPU * Prescaler * Prescaler
+    // Overflow period = Time Period * Prescaler * Count 
+    //                 = 1/FCPU * Prescaler * Count
     //                 = 0.2 * 256 * 256 us = 13107.2 us = 0.0131072 sec
     // Overflow Count  = 1/0.0131072 = 76.293945313 ~ 76
     
