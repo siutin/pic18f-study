@@ -31,6 +31,7 @@ void interrupt ISR()
       //TMR0 Overflow ISR
       tr1SecCounter++;  //Increment Over Flow Counter
 
+      // 8MHz: 30.5, 20MHz: 76, 32MHz: 122
       if(tr1SecCounter==122)
       {
         if (tr1SecSignal == false) 
