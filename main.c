@@ -42,7 +42,7 @@ void main(void)
 
     /* TODO <INSERT USER APPLICATION CODE HERE> */
 
-    TRISA = 0; 
+    TRISB = 0; 
     
     while(1) {
         
