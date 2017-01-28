@@ -9,7 +9,7 @@ void delay100ms(int count)
 {
     int i,j,k;
     for (k=0; k < count; k++) {
-        for (i=0; i< 164; i++) {
+        for (i=0; i< 164 * RATIO; i++) {
             for(j=0; j< 100; j++) {}
         }
     }    

@@ -8,6 +8,8 @@
 #define SYS_FREQ        8000000L
 #define FCY             SYS_FREQ/4
 
+#define RATIO              4    // if ppl enabled: 4, otherwise 0
+
 /******************************************************************************/
 /* System Function Prototypes                                                 */
 /******************************************************************************/
