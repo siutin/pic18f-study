@@ -9,10 +9,7 @@
 #define SYS_FREQ        40000000L
 #define FCY             SYS_FREQ/4
 
-//#define SYS_FREQ        32000000L
-//#define FCY             SYS_FREQ/4
-//#define FOSC            32000000L
-//#define INT_OSC            8000000L
+#define _XTAL_FREQ      40000000L
 
 /******************************************************************************/
 /* System Function Prototypes                                                 */

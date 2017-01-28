@@ -46,14 +46,21 @@ void main(void)
     
     while(1) {
         
-      if (tr1SecSignal) {
-        LATAbits.LATA0=1;
-        LATAbits.LATA1=0;
-      } else {
-        LATAbits.LATA0=0;
-        LATAbits.LATA1=1;
-       }
-
+//      if (tr1SecSignal) {
+//        LATBbits.LATB0=1;
+//        LATBbits.LATB1=0;
+//      } else {
+//        LATBbits.LATB0=0;
+//        LATBbits.LATB1=1;
+//       }
+        
+        LATBbits.LATB0=1;
+        LATBbits.LATB1=0;        
+        __delay_ms(1000);
+        
+        LATBbits.LATB0=0;
+        LATBbits.LATB1=1;
+        __delay_ms(1000);
     }  
 }
 
